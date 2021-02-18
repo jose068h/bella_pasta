@@ -42,6 +42,7 @@ h1 {
     font-size: 70px;
     line-height: 1.6;
     color: #A89080;
+    margin-left: 20px;
     ;
 }
 .navimg {
@@ -106,6 +107,7 @@ a {
     max-width: 100%;
     height: 12vw;
     object-fit: cover;
+    margin-bottom: 10vw;
 }
 img {
     width: 100%;
