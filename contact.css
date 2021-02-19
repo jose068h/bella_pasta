@@ -99,6 +99,7 @@ a {
     place-self: top;
     padding: 70px;
     background-color: #D1E0F4;
+    text-align: center;
 }
 
 .article_long_left {
@@ -111,6 +112,7 @@ a {
     place-self: center;
     padding: 70px;
     background-color: #D1E0F4;
+    text-align: center;
 }
 
 .smaabilleder {
