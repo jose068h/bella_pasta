@@ -90,7 +90,7 @@ a {
 }
 
 .article_long_right {
-    grid-column: 2 / span 2;
+    grid-column: 3 / span 2;
 }
 
 .article_short_right {
@@ -126,7 +126,7 @@ a {
 }
 
 img {
-    width: 100%;
+    width: 46vw;
 }
 
 footer {
