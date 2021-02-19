@@ -8,6 +8,44 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/mhz1hyo.css">
 
+    <style>
+        html {
+            max-width: 100%;
+        }
+
+        .menu {
+            margin-left: 1px;
+        }
+
+        button {
+
+            word-spacing: 1vw;
+            font-size: 14px;
+
+        }
+
+        nav.menu {
+            word-spacing: 1px;
+        }
+
+
+
+        @media screen and (min-width: 777px) {
+
+            nav.menu {
+                word-spacing: 1px;
+            }
+
+            button {
+
+                font-size: 24px;
+                margin: 8px;
+            }
+
+
+
+        }
+    </style>
 </head>
 
 
@@ -28,24 +66,22 @@
 
     </header>
     <h1>MENU</h1>
-    <container class="menu">
+    <nav class="menu">
         <button data-retter="alle" class="valgt">Alle</button>
-        <button data-retter="forretter">Forretter</button>
-        <button data-retter="hovedretter">Hovedretter</button>
-        <button data-retter="sideorders">Sideorders</button>
-        <button data-retter="desserter">Desserter</button>
-        <button data-retter="drikkevarer">Drikkevarer</button>
-    </container>
+        <button data-retter="forret">Antipasti</button>
+        <button data-retter="pasta">Pasta</button>
+        <button data-retter="pizza">Pizza</button>
+        <button data-retter="vin">Wine</button>
+
+    </nav>
     <template>
         <article class="indhold">
 
             <h2></h2>
             <img class="billede">
-            <p class="id"></p>
             <p class="kategori"></p>
-            <p class="langBeskrivelse"></p>
-            <p class="kortBeskrivelse"></p>
-            <p class="oprindelsesRegion"></p>
+            <p class="beskrivelse"></p>
+            <p class="navn"></p>
             <p class="pris"></p>
 
         </article>
@@ -96,14 +132,9 @@
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt")
             vis();
-            header.textContent = this.textContent;
-
-
+            header.textContent = this.textContent
 
         }
-
-
-
 
 
         async function hentData() {
@@ -115,19 +146,10 @@
             //console.log("json: ", json);
 
 
-
-
-
             vis();
 
 
-
-
-
         }
-
-
-
 
 
         function vis() {
@@ -137,14 +159,11 @@
                 console.log("Retter", ret.kategori);
                 if (filter == ret.kategori || filter == "alle") {
                     const klon = template.cloneNode(true);
-                    klon.querySelector(".billede").src = medieurl + ret.billede;
+                    klon.querySelector(".billede").src = medieurl + ret.billeder;
                     klon.querySelector("h2").textContent = ret.navn;
-                    klon.querySelector(".id").textContent = ret.id;
                     klon.querySelector(".kategori").textContent = ret.kategori;
-                    klon.querySelector(".kortBeskrivelse").textContent = ret.kortBeskrivelse;
-                    klon.querySelector(".langBeskrivelse").textContent = ret.langBeskrivelse;
+                    klon.querySelector(".beskrivelse").textContent = ret.beskrivelse;
                     klon.querySelector(".pris").textContent = ret.pris + " DKK";
-                    klon.querySelector(".oprindelsesRegion").textContent = ret.oprindelsesRegion;
                     klon.querySelector(".indhold").addEventListener("click", () => visIndhold(ret));
                     sektion.appendChild(klon);
                 }
@@ -161,7 +180,6 @@
 
             location.href = `menu-detalje.html?id=${hvad._id}`;
         }
-
     </script>
     <footer id="footer">
         <div class="section_wrapper">
@@ -194,6 +212,4 @@
             </div>
         </div>
     </footer>
-</body>
-
-</html>
+</body></html>

@@ -82,9 +82,8 @@
             color: red;
         }
 
-        .oprindelsesregion {
-            font-weight: bold;
-        }
+
+
 
         p {
             font-family: 'Helvetica Neue', sans-serif;
@@ -94,7 +93,6 @@
             margin-bottom: 0;
             line-height: 1.6;
         }
-
     </style>
 
 </head>
@@ -108,9 +106,9 @@
     <article class="menu">
         <img src="" alt="" class="billede">
         <p class="pris"></p>
-        <p class="kortbeskrivelse"></p>
-        <p class="langbeskrivelse"></p>
-        <p class="oprindelsesregion"></p>
+        <p class="navn"></p>
+        <p class="beskrivelse"></p>
+
     </article>
 
     <button>Tilbage</button>
@@ -141,18 +139,13 @@
         function visMenu() {
             document.querySelector(".navn").textContent = menu.navn;
             document.querySelector(".pris").textContent = menu.pris + " kr";
-            document.querySelector(".langbeskrivelse").textContent += menu.langbeskrivelse;
-            document.querySelector(".oprindelsesregion").textContent = menu.oprindelsesregion;
-            document.querySelector(".billede").src = medieurl + menu.billede;
-
+            document.querySelector(".beskrivelse").textContent += menu.beskrivelse;
+            document.querySelector(".billede").src = medieurl + menu.billeder;
             document.querySelector("button").addEventListener("click", tilbageTilMenuGalleri);
         }
 
         function tilbageTilMenuGalleri() {
             history.back();
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
