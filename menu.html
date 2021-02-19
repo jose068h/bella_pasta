@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
 
-
-
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/mhz1hyo.css">
 
-
 </head>
-
-
-
 
 
 <body>
@@ -30,6 +22,8 @@
 
         </nav>
         <a href="menu.html"><img class="navimg" src="logo'er/logobl%C3%A5-02.svg" alt="img"></a>
+
+
 
 
     </header>
@@ -65,13 +59,13 @@
     </main>
 
     <script>
-        const url = "https://babushka-dd8a.restdb.io/rest/menu";
-        const medieurl = "https://babushka-dd8a.restdb.io/media/";
+        const url = "https://bellapasta-fe58.restdb.io/rest/menu";
+        const medieurl = "https://bellapasta-fe58.restdb.io/media/";
         const sektion = document.querySelector("#menu");
         const template = document.querySelector("template").content;
         const options = {
             headers: {
-                'x-apikey': "600ec2fb1346a1524ff12de4"
+                'x-apikey': "602eacd85ad3610fb5bb6365"
             }
         };
         const header = document.querySelector("header h1");
@@ -165,7 +159,7 @@
         function visIndhold(hvad) {
             console.log("kan sende videre til detalje side")
 
-            location.href = `detaljer.html?id=${hvad._id}`;
+            location.href = `menu-detalje.html?id=${hvad._id}`;
         }
 
     </script>

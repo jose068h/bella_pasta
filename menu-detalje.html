@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title></title>
+    <style>
+        html {
+            font-family: bely-display, sans-serif;
+            margin-left: 30vw;
+            margin-right: 30vw;
+            margin-bottom: 10vw;
+            background-color: #D1E0F4;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .menu {
+            padding: 1em;
+            border: 1px solid;
+            border-radius: 1em;
+
+        }
+
+        article {
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+
+
+        button {
+            background-color: antiquewhite;
+            color: black;
+            margin: 0.5rem;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            font-family: bely-display, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+
+        /*     button {
+        text-align: center;
+        margin: 0.5rem;
+        font-size: 1.6rem;
+        border-radius: 7px;
+        background-color: #8e8888;
+        color: #272727;
+        border-color: #272727;
+        padding: 6px;
+        }*/
+
+        .valgt {
+            color: #ede6e6;
+            background-color: #272727;
+            border-color: #8e8888;
+        }
+
+        .navn {
+            font-family: bely-display, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 70px;
+            line-height: 1.6;
+            text-align: center;
+            color: #A89080;
+
+
+        }
+
+        .pris {
+            color: red;
+        }
+
+        .oprindelsesregion {
+            font-weight: bold;
+        }
+
+        p {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            font-style: normal;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1></h1>
+    </header>
+
+    <h2 class="navn"></h2>
+    <article class="menu">
+        <img src="" alt="" class="billede">
+        <p class="pris"></p>
+        <p class="kortbeskrivelse"></p>
+        <p class="langbeskrivelse"></p>
+        <p class="oprindelsesregion"></p>
+    </article>
+
+    <button>Tilbage</button>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+
+        const medieurl = "https://bellapasta-fe58.restdb.io/media/";
+        let menu;
+        const myHeaders = {
+            "x-apikey": "602eacd85ad3610fb5bb6365"
+        }
+        console.log("ID", id);
+        document.addEventListener("DOMContentLoaded", loadJSON);
+
+        async function loadJSON() {
+            const JSONData = await fetch(`https://bellapasta-fe58.restdb.io/rest/menu/${id}`, {
+                headers: myHeaders
+            })
+            menu = await JSONData.json();
+
+            console.log("Menu", menu);
+            visMenu(menu);
+        }
+
+        function visMenu() {
+            document.querySelector(".navn").textContent = menu.navn;
+            document.querySelector(".pris").textContent = menu.pris + " kr";
+            document.querySelector(".langbeskrivelse").textContent += menu.langbeskrivelse;
+            document.querySelector(".oprindelsesregion").textContent = menu.oprindelsesregion;
+            document.querySelector(".billede").src = medieurl + menu.billede;
+
+            document.querySelector("button").addEventListener("click", tilbageTilMenuGalleri);
+        }
+
+        function tilbageTilMenuGalleri() {
+            history.back();
+        }
+
+    </script>
+</body>
+
+</html>
