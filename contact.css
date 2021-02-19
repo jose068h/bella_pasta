@@ -95,8 +95,8 @@ a {
 
 .article_short_right {
     grid-column: 3 / span 1;
-    background-color: white;
-    place-self: center;
+
+    place-self: top;
     padding: 70px;
     background-color: #D1E0F4;
 }
