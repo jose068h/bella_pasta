@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
 
-
-
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +8,45 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/mhz1hyo.css">
 
+    <style>
+        html {
+            max-width: 100%;
+        }
 
+        .menu {
+            margin-left: 1px;
+        }
+
+        button {
+
+            word-spacing: 1vw;
+            font-size: 14px;
+
+        }
+
+        nav.menu {
+            word-spacing: 1px;
+        }
+
+
+
+        @media screen and (min-width: 777px) {
+
+            nav.menu {
+                word-spacing: 1px;
+            }
+
+            button {
+
+                font-size: 24px;
+                margin: 8px;
+            }
+
+
+
+        }
+    </style>
 </head>
-
-
-
 
 
 <body>
@@ -32,26 +62,26 @@
         <a href="menu.html"><img class="navimg" src="logo'er/logobl%C3%A5-02.svg" alt="img"></a>
 
 
+
+
     </header>
     <h1>MENU</h1>
-    <container class="menu">
+    <nav class="menu">
         <button data-retter="alle" class="valgt">Alle</button>
-        <button data-retter="forretter">Forretter</button>
-        <button data-retter="hovedretter">Hovedretter</button>
-        <button data-retter="sideorders">Sideorders</button>
-        <button data-retter="desserter">Desserter</button>
-        <button data-retter="drikkevarer">Drikkevarer</button>
-    </container>
+        <button data-retter="forret">Antipasti</button>
+        <button data-retter="pasta">Pasta</button>
+        <button data-retter="pizza">Pizza</button>
+        <button data-retter="vin">Wine</button>
+
+    </nav>
     <template>
         <article class="indhold">
 
             <h2></h2>
             <img class="billede">
-            <p class="id"></p>
             <p class="kategori"></p>
-            <p class="langBeskrivelse"></p>
-            <p class="kortBeskrivelse"></p>
-            <p class="oprindelsesRegion"></p>
+            <p class="beskrivelse"></p>
+            <p class="navn"></p>
             <p class="pris"></p>
 
         </article>
@@ -65,13 +95,13 @@
     </main>
 
     <script>
-        const url = "https://babushka-dd8a.restdb.io/rest/menu";
-        const medieurl = "https://babushka-dd8a.restdb.io/media/";
+        const url = "https://bellapasta-fe58.restdb.io/rest/menu";
+        const medieurl = "https://bellapasta-fe58.restdb.io/media/";
         const sektion = document.querySelector("#menu");
         const template = document.querySelector("template").content;
         const options = {
             headers: {
-                'x-apikey': "600ec2fb1346a1524ff12de4"
+                'x-apikey': "602eacd85ad3610fb5bb6365"
             }
         };
         const header = document.querySelector("header h1");
@@ -102,14 +132,9 @@
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt")
             vis();
-            header.textContent = this.textContent;
-
-
+            header.textContent = this.textContent
 
         }
-
-
-
 
 
         async function hentData() {
@@ -121,19 +146,10 @@
             //console.log("json: ", json);
 
 
-
-
-
             vis();
 
 
-
-
-
         }
-
-
-
 
 
         function vis() {
@@ -143,14 +159,11 @@
                 console.log("Retter", ret.kategori);
                 if (filter == ret.kategori || filter == "alle") {
                     const klon = template.cloneNode(true);
-                    klon.querySelector(".billede").src = medieurl + ret.billede;
+                    klon.querySelector(".billede").src = medieurl + ret.billeder;
                     klon.querySelector("h2").textContent = ret.navn;
-                    klon.querySelector(".id").textContent = ret.id;
                     klon.querySelector(".kategori").textContent = ret.kategori;
-                    klon.querySelector(".kortBeskrivelse").textContent = ret.kortBeskrivelse;
-                    klon.querySelector(".langBeskrivelse").textContent = ret.langBeskrivelse;
+                    klon.querySelector(".beskrivelse").textContent = ret.beskrivelse;
                     klon.querySelector(".pris").textContent = ret.pris + " DKK";
-                    klon.querySelector(".oprindelsesRegion").textContent = ret.oprindelsesRegion;
                     klon.querySelector(".indhold").addEventListener("click", () => visIndhold(ret));
                     sektion.appendChild(klon);
                 }
@@ -165,9 +178,8 @@
         function visIndhold(hvad) {
             console.log("kan sende videre til detalje side")
 
-            location.href = `detaljer.html?id=${hvad._id}`;
+            location.href = `menu-detalje.html?id=${hvad._id}`;
         }
-
     </script>
     <footer id="footer">
         <div class="section_wrapper">
@@ -200,6 +212,4 @@
             </div>
         </div>
     </footer>
-</body>
-
-</html>
+</body></html>

@@ -90,15 +90,16 @@ a {
 }
 
 .article_long_right {
-    grid-column: 2 / span 2;
+    grid-column: 3 / span 1;
 }
 
 .article_short_right {
     grid-column: 3 / span 1;
-    background-color: white;
-    place-self: center;
+
+    place-self: top;
     padding: 70px;
     background-color: #D1E0F4;
+    text-align: center;
 }
 
 .article_long_left {
@@ -111,6 +112,7 @@ a {
     place-self: center;
     padding: 70px;
     background-color: #D1E0F4;
+    text-align: center;
 }
 
 .smaabilleder {
@@ -126,7 +128,7 @@ a {
 }
 
 img {
-    width: 100%;
+    width: 46vw;
 }
 
 footer {
