@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 body {
     background-color: #D1E0F4;
     padding: 10px;
@@ -136,7 +137,7 @@ footer .col1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 5px;
+    padding-top: 30px;
     margin-right: 2vw;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 20px;
