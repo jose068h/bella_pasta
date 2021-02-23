@@ -294,18 +294,6 @@
             text-align: center;
         }
 
-        .smaabilleder {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 5px;
-        }
-
-
-        .smaabilleder img {
-            max-width: 100%;
-            height: 12vw;
-            object-fit: cover;
-        }
 
         img {
             width: 46vw;
