@@ -56,12 +56,12 @@ header {
 }
 nav {
     text-align: center;
-    word-spacing: 5vw;
+    word-spacing: 10vw;
     padding-top: 1vw;
     font-family: 'cyreneregular';
     font-weight: normal;
     font-style: normal;
-    font-size: 19px;
+    font-size: 30px;
     color: #D1E0F4;
 }
 a {
