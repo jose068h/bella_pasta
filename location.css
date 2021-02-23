@@ -150,6 +150,16 @@ footer .bottom {
     padding-bottom: 10px;
 }
 @media screen and (max-width: 600px) {
+    nav {
+        text-align: center;
+        word-spacing: 10vw;
+        padding-top: 1vw;
+        font-family: 'cyreneregular';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 20px;
+        color: #D1E0F4;
+    }
     .indhold {
         display: grid;
         grid-auto-flow: dense;
