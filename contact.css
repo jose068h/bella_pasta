@@ -34,9 +34,7 @@ h2 {
     text-align: center;
 }
 h1 {
-    /*font-family: 'Helvetica Neue', sans-serif;
-            font-size: 70px;
-            font-weight: 300;*/
+
     font-family: bely-display, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -151,7 +149,48 @@ footer .bottom {
 
 /********************************MOBILE*****************************/
 
+<<<<<<< HEAD
+
+
+
+@media screen and (max-width: 600px) {
+    .indhold {
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+    }
+
+
+    .article_long_right {
+        grid-column: 1;
+    }
+
+    .article_short_right {
+        grid-column: 1;
+        place-self: center;
+        background-color: #D1E0F4;
+
+    }
+
+    .article_long_left {
+        grid-column: 1;
+    }
+
+    .article_short_left {
+        grid-column: 1;
+        background-color: white;
+        place-self: center;
+        background-color: #D1E0F4;
+    }
+
+    img {
+        width: 85vw;
+    }
+
+=======
 @media (max-width: 500px) {
     .article_long_right {}
     footer img {}
+>>>>>>> origin/main
 }
