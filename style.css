@@ -130,8 +130,8 @@ button {
 
 
 #menu {
-    display: grid;
-    grid-auto-flow: dense;
+    /*   display: grid;*/
+    /*  grid-auto-flow: dense;*/
     grid-template-columns: 1fr;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
@@ -154,6 +154,9 @@ nav.menu {
     word-spacing: 1px;
 }
 
+.pris {
+    color: red;
+}
 
 
 footer {
@@ -214,6 +217,19 @@ footer .col1 {
 
     button {
         letter-spacing: 9px;
+    }
+
+
+    .alan {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
 
