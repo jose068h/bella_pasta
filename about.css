@@ -120,7 +120,6 @@ footer .section_wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 0px;
-    border-top: 1px solid black;
 }
 footer img {
     height: 9vw;
@@ -178,7 +177,6 @@ footer .bottom {
         display: grid;
         grid-template-columns: 2fr;
         column-gap: 0px;
-        border-top: 1px solid black;
     }
     footer img {
         display: none
