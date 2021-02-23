@@ -56,8 +56,10 @@ h1 {
 .navimg {
     width: 20vw;
     margin-top: 2vw;
-    margin-left: 42vw;
     margin-bottom: 2vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 header {
     background-color: #A89080;
