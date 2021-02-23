@@ -4,12 +4,10 @@
     font-weight: normal;
     font-style: normal;
 }
-
 body {
     background-color: #D1E0F4;
     padding: 10px;
 }
-
 p {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 15px;
@@ -18,7 +16,6 @@ p {
     margin-bottom: 0;
     line-height: 1.6;
 }
-
 article {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 15px;
@@ -27,7 +24,6 @@ article {
     margin-bottom: 0;
     line-height: 1.6;
 }
-
 h2 {
     font-family: bely, serif;
     font-weight: 700;
@@ -37,7 +33,6 @@ h2 {
     line-height: 1.6;
     text-align: center;
 }
-
 h1 {
 
     font-family: bely-display, sans-serif;
@@ -48,18 +43,17 @@ h1 {
     color: #A89080;
     ;
 }
-
 .navimg {
     width: 20vw;
     margin-top: 2vw;
-    margin-left: 42vw;
     margin-bottom: 2vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 header {
     background-color: #A89080;
 }
-
 nav {
     text-align: center;
     word-spacing: 10vw;
@@ -70,16 +64,13 @@ nav {
     font-size: 30px;
     color: #D1E0F4;
 }
-
 a {
     color: #D1E0F4;
     text-decoration: none;
 }
-
 .menu {
     margin-left: 30vw;
 }
-
 .indhold {
     display: grid;
     grid-auto-flow: dense;
@@ -87,24 +78,19 @@ a {
     grid-auto-rows: 1fr;
     padding: 10px;
 }
-
 .article_long_right {
     grid-column: 3 / span 1;
 }
-
 .article_short_right {
     grid-column: 3 / span 1;
-
     place-self: top;
     padding: 70px;
     background-color: #D1E0F4;
     text-align: center;
 }
-
 .article_long_left {
     grid-column: 1 / span 2;
 }
-
 .article_short_left {
     grid-column: 1 / span 1;
     background-color: white;
@@ -113,47 +99,39 @@ a {
     background-color: #D1E0F4;
     text-align: center;
 }
-
 .smaabilleder {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5px;
 }
-
 .smaabilleder img {
     max-width: 100%;
     height: 12vw;
     object-fit: cover;
 }
-
 img {
     width: 46vw;
 }
-
 footer {
     z-index: 5;
     background-color: white;
     position: relative;
 }
-
 footer .section_wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 0px;
     border-top: 1px solid black;
 }
-
 footer img {
     height: 9vw;
     width: auto;
     margin-left: 5vw;
 }
-
 footer .col {
     margin: 50px;
     padding-top: 5px;
 }
-
 footer .col1 {
     display: flex;
     flex-direction: row;
@@ -164,15 +142,14 @@ footer .col1 {
     font-size: 20px;
     font-weight: 200;
 }
-
 footer .bottom {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-
 /********************************MOBILE*****************************/
 
+<<<<<<< HEAD
 
 
 
@@ -211,4 +188,9 @@ footer .bottom {
         width: 85vw;
     }
 
+=======
+@media (max-width: 500px) {
+    .article_long_right {}
+    footer img {}
+>>>>>>> origin/main
 }
