@@ -25,16 +25,19 @@ section {
     padding-left: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /*    grid-template-rows: 1fr 1fr 1fr 1fr;*/
     grid-gap: 20px;
 }
 
 article {
-    /*border: 1px solid black;*/
+    border: 1px solid rgba(168, 144, 128, 0.61);
     padding: 20px;
     font-family: bely, serif;
     font-weight: 700;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 p {
@@ -52,8 +55,6 @@ h2 {
     font-style: normal;
     font-size: 30px;
     margin-bottom: 0;
-    line-height: 1.6;
-    text-align: center;
 }
 
 h1 {
@@ -129,13 +130,14 @@ button {
 }*/
 
 
+/*
 #menu {
-    /*   display: grid;*/
-    /*  grid-auto-flow: dense;*/
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
 }
+*/
 
 .indhold {}
 
@@ -154,9 +156,6 @@ nav.menu {
     word-spacing: 1px;
 }
 
-.pris {
-    color: red;
-}
 
 
 footer {
@@ -217,19 +216,6 @@ footer .col1 {
 
     button {
         letter-spacing: 9px;
-    }
-
-
-    .alan {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    article {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
 
 
