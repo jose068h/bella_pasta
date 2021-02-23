@@ -9,9 +9,9 @@
     <style>
         html {
             font-family: bely-display, sans-serif;
-            margin-left: 30vw;
-            margin-right: 30vw;
-            margin-bottom: 10vw;
+            margin-left: 3vw;
+            margin-right: 3vw;
+            margin-bottom: 3vw;
             background-color: #D1E0F4;
         }
 
@@ -20,14 +20,11 @@
         }
 
         .menu {
-            padding: 1em;
-            border: 1px solid;
             border-radius: 1em;
 
         }
 
         article {
-            background-color: antiquewhite;
             padding: 10px;
         }
 
@@ -46,53 +43,80 @@
             font-style: normal;
         }
 
-
-
-
-        /*     button {
-        text-align: center;
-        margin: 0.5rem;
-        font-size: 1.6rem;
-        border-radius: 7px;
-        background-color: #8e8888;
-        color: #272727;
-        border-color: #272727;
-        padding: 6px;
-        }*/
-
-        .valgt {
-            color: #ede6e6;
-            background-color: #272727;
-            border-color: #8e8888;
-        }
-
-        .navn {
+        /* .navn {
             font-family: bely-display, sans-serif;
             font-weight: 400;
             font-style: normal;
-            font-size: 70px;
+            font-size: 34px;
             line-height: 1.6;
             text-align: center;
-            color: #A89080;
+            color: black;
+        }*/
 
-
-        }
-
-        .pris {
-            color: red;
-        }
-
-
-
-
-        p {
-            font-family: 'Helvetica Neue', sans-serif;
-            font-size: 15px;
-            font-weight: 300;
+        h2 {
+            font-family: bely, serif;
+            font-weight: 700;
             font-style: normal;
+            font-size: 30px;
             margin-bottom: 0;
             line-height: 1.6;
         }
+
+
+        /* ------------------- WEB VERSION -----------------------------*/
+
+        @media screen and (min-width: 777px) {
+            html {
+
+                margin-left: 30vw;
+                margin-right: 30vw;
+                margin-bottom: 10vw;
+
+            }
+
+
+
+
+
+
+
+            .valgt {
+                color: #ede6e6;
+                background-color: #272727;
+                border-color: #8e8888;
+            }
+
+            /*  .navn {
+                font-family: bely-display, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 70px;
+                line-height: 1;
+                text-align: center;
+                color: black;
+
+
+            }*/
+
+
+
+            .pris {
+                color: red;
+            }
+
+
+
+
+            p {
+                font-family: 'Helvetica Neue', sans-serif;
+                font-size: 15px;
+                font-weight: 300;
+                font-style: normal;
+                margin-bottom: 0;
+                line-height: 1.6;
+            }
+        }
+
     </style>
 
 </head>
@@ -147,5 +171,8 @@
         function tilbageTilMenuGalleri() {
             history.back();
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
