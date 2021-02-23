@@ -1,4 +1,4 @@
-@font-face {
+    @font-face {
     font-family: 'cyreneregular';
     src: url('cyrene_regular-webfont.woff2') format('woff2'), url('cyrene_regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -39,7 +39,6 @@ h2 {
 }
 
 h1 {
-
     font-family: bely-display, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -173,41 +172,49 @@ footer .bottom {
 
 /********************************MOBILE*****************************/
 
+<<<<<<< HEAD
 
 @media screen and (max-width: 600px) {
+=======
+<<<<<<< HEAD @media screen and (max-width: 600px) {
+    nav {
+        text-align: center;
+        word-spacing: 10vw;
+        padding-top: 1vw;
+        font-family: 'cyreneregular';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 20px;
+        color: #D1E0F4;
+    }
+>>>>>>> origin/main
     .indhold {
         display: block;
         grid-auto-flow: dense;
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
     }
-
-
     .article_long_right {
         grid-column: 1;
     }
-
     .article_short_right {
         grid-column: 1;
         place-self: center;
         background-color: #D1E0F4;
-
     }
-
     .article_long_left {
         grid-column: 1;
     }
-
     .article_short_left {
         grid-column: 1;
         background-color: white;
         place-self: center;
         background-color: #D1E0F4;
     }
-
     img {
         width: 85vw;
     }
+<<<<<<< HEAD
 
     /***********************FOOTER**********************/
 
@@ -244,3 +251,10 @@ footer .bottom {
 
 
 }
+=======
+    =======@media (max-width: 500px) {
+        .article_long_right {}
+        footer img {}
+        >>>>>>> origin/main
+    }
+>>>>>>> origin/main
