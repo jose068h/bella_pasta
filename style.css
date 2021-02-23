@@ -19,7 +19,10 @@ body {
 }
 
 section {
-    padding: 30px;
+    padding-top: 1px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -100,14 +103,13 @@ a {
 }
 
 .valgt {
-    background-color: #eddfcc;
+    background-color: rgba(168, 144, 128, 0.61);
 }
 
 
 button {
-    background-color: antiquewhite;
+    background-color: rgba(191, 207, 229, 0.27);
     color: black;
-    border: none;
     padding: 13px 5px;
     text-align: center;
     display: inline-block;
@@ -117,7 +119,14 @@ button {
     font-style: normal;
     word-spacing: 5vw;
     font-size: 18px;
+    border: 2.4px solid rgba(168, 144, 128, 0.3);
+    border-radius: 5px;
 }
+
+/*button {
+    word-spacing: 5vw;
+    font-size: 19px;
+}*/
 
 
 #menu {
@@ -145,10 +154,7 @@ nav.menu {
     word-spacing: 1px;
 }
 
-button {
-    word-spacing: 5vw;
-    font-size: 19px;
-}
+
 
 footer {
     z-index: 5;
@@ -188,6 +194,8 @@ footer .col1 {
 
     nav.menu {
         word-spacing: 10px;
+        display: flex;
+        justify-content: center;
     }
 
     nav {
@@ -203,6 +211,11 @@ footer .col1 {
     #menu {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    button {
+        letter-spacing: 9px;
+    }
+
 
 
     /*   ---------footer------------*/
@@ -222,5 +235,6 @@ footer .col1 {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
 
 }
