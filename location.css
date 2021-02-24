@@ -208,7 +208,6 @@
     	display: grid;
     	grid-template-columns: 1fr 2fr;
     	column-gap: 0px;
-    	border-top: 1px solid black;
     }
 
     footer img {
