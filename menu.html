@@ -10,6 +10,7 @@
 
     <style>
 
+
     </style>
 </head>
 
@@ -73,14 +74,9 @@
         const header = document.querySelector("header h1");
 
 
-
-
         document.addEventListener("DOMContentLoaded", start)
         let retter;
         let filter = "alle";
-
-
-
 
 
         function start() {
@@ -91,7 +87,6 @@
         }
 
 
-
         function filtrerRetter() {
             console.log("flitrer retter");
             filter = this.dataset.retter;
@@ -99,9 +94,7 @@
             this.classList.add("valgt")
             vis();
             header.textContent = this.textContent
-
         }
-
 
         async function hentData() {
             console.log("hent data")
@@ -110,11 +103,7 @@
             //personer = await JSONData.json();
             console.log("Retter", retter);
             //console.log("json: ", json);
-
-
             vis();
-
-
         }
 
 
@@ -133,10 +122,6 @@
                     klon.querySelector(".indhold").addEventListener("click", () => visIndhold(ret));
                     sektion.appendChild(klon);
                 }
-
-
-
-
 
             })
         }
