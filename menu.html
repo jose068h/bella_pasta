@@ -46,8 +46,8 @@
                 <h2></h2>
             </div>
             <div>
-               <h3 class="kategori"></h3>
-               <!-- <p class="kategori"></p>-->
+                <h3 class="kategori"></h3>
+                <!-- <p class="kategori"></p>-->
                 <p class="beskrivelse"></p>
                 <p class="navn"></p>
                 <p class="pris"></p>
@@ -74,8 +74,6 @@
         const header = document.querySelector("header h1");
 
 
-
-
         document.addEventListener("DOMContentLoaded", start)
         let retter;
         let filter = "alle";
@@ -83,7 +81,7 @@
 
 
 
-
+        // første funktion der kaldes efter DOM er loaded
         function start() {
             console.log("start");
             const filterKnapper = document.querySelectorAll("nav button");
@@ -91,39 +89,39 @@
             hentData();
         }
 
-
-
         function filtrerRetter() {
+            //sæt variablen filter til værdien af data-troende på den knap de er klikket på;
             console.log("flitrer retter");
             filter = this.dataset.retter;
+            //fjern klassen valgt fra den knap som den er påsat på i html
             document.querySelector(".valgt").classList.remove("valgt");
+            //markere den knap der er klikket på, dette gøres ved at anvende this og add
             this.classList.add("valgt")
+            //når der klikkes på en knap, sørger eventhandleren.funktionen for, at h1-overskriften indehold opdateres. this henviser til den button der er klikket på;
             vis();
             header.textContent = this.textContent
-
+            //kald funktionen visperson efter det nye filter er sat på;
         }
 
 
         async function hentData() {
+            //Henter data fra restdb
             console.log("hent data")
             const resspons = await fetch(url, options);
             retter = await resspons.json();
-            //personer = await JSONData.json();
             console.log("Retter", retter);
-            //console.log("json: ", json);
-
-
             vis();
-
-
         }
 
 
+        //funktion der viser retterne i liste view
         function vis() {
             console.log("vis");
             sektion.textContent = "";
             retter.forEach(ret => {
                 console.log("Retter", ret.kategori);
+                // loop igennem json (personer)
+                // tjek hvilken tro personeren har og sammenlign med aktuelt filter eller vis alle, hvis filter har værdien "alle";
                 if (filter == ret.kategori || filter == "alle") {
                     const klon = template.cloneNode(true);
                     klon.querySelector(".billede").src = medieurl + ret.billeder;
@@ -134,15 +132,11 @@
                     klon.querySelector(".indhold").addEventListener("click", () => visIndhold(ret));
                     sektion.appendChild(klon);
                 }
-
-
-
-
-
             })
         }
 
         function visIndhold(hvad) {
+            //her navigerer vi med location.href han til en side. vi sender urlParametret id med og det får værdien af hvem._id
             console.log("kan sende videre til detalje side")
 
             location.href = `menu-detalje.html?id=${hvad._id}`;
