@@ -81,12 +81,8 @@
         let filter = "alle";
 
 
-<<<<<<< HEAD
-=======
-
-
         // første funktion der kaldes efter DOM er loaded
->>>>>>> origin/main
+
         function start() {
             console.log("start");
             const filterKnapper = document.querySelectorAll("nav button");
@@ -94,10 +90,7 @@
             hentData();
         }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
         function filtrerRetter() {
             //sæt variablen filter til værdien af data-troende på den knap de er klikket på;
             console.log("flitrer retter");
@@ -106,13 +99,12 @@
             document.querySelector(".valgt").classList.remove("valgt");
             //markere den knap der er klikket på, dette gøres ved at anvende this og add
             this.classList.add("valgt")
-            //når der klikkes på en knap, sørger eventhandleren.funktionen for, at h1-overskriften indehold opdateres. this henviser til den button der er klikket på;
+                //når der klikkes på en knap, sørger eventhandleren.funktionen for, at h1-overskriften indehold opdateres. this henviser til den button der er klikket på;
             vis();
             header.textContent = this.textContent
-<<<<<<< HEAD
-=======
+
             //kald funktionen visperson efter det nye filter er sat på;
->>>>>>> origin/main
+
         }
 
         async function hentData() {
@@ -121,10 +113,9 @@
             const resspons = await fetch(url, options);
             retter = await resspons.json();
             console.log("Retter", retter);
-<<<<<<< HEAD
+
             //console.log("json: ", json);
-=======
->>>>>>> origin/main
+
             vis();
         }
 
@@ -147,10 +138,7 @@
                     klon.querySelector(".indhold").addEventListener("click", () => visIndhold(ret));
                     sektion.appendChild(klon);
                 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
             })
         }
 
