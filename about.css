@@ -80,6 +80,7 @@ a {
 }
 .article_long_right {
     grid-column: 2 / span 2;
+    padding: 10px;
 }
 .article_short_right {
     grid-column: 3 / span 1;
@@ -90,6 +91,7 @@ a {
 .article_long_left {
     grid-column: 1 / span 2;
     place-self: center;
+    padding: 10px;
 }
 .article_short_left {
     grid-column: 1 / span 1;
