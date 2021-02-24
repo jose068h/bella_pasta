@@ -172,7 +172,7 @@
     }
 
     .article_short_left {
-    	grid-column: 1 / span 2;
+    	grid-column: 1 / span 1;
     	background-color: white;
     	place-self: center;
     	padding: 10px;
