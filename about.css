@@ -80,23 +80,25 @@ a {
 }
 .article_long_right {
     grid-column: 2 / span 2;
+    padding: 10px;
 }
 .article_short_right {
     grid-column: 3 / span 1;
     place-self: center;
     background-color: #D1E0F4;
-    padding: 20px;
+    padding: 10px;
 }
 .article_long_left {
     grid-column: 1 / span 2;
     place-self: center;
+    padding: 10px;
 }
 .article_short_left {
     grid-column: 1 / span 1;
     background-color: white;
     place-self: center;
     background-color: #D1E0F4;
-    padding: 20px;
+    padding: 10px;
 }
 .smaabilleder {
     display: grid;
