@@ -85,7 +85,7 @@ a {
     grid-column: 3 / span 1;
     place-self: center;
     background-color: #D1E0F4;
-    padding: 20px;
+    padding: 10px;
 }
 .article_long_left {
     grid-column: 1 / span 2;
@@ -96,7 +96,7 @@ a {
     background-color: white;
     place-self: center;
     background-color: #D1E0F4;
-    padding: 20px;
+    padding: 10px;
 }
 .smaabilleder {
     display: grid;
@@ -152,7 +152,7 @@ footer .bottom {
         font-family: 'cyreneregular';
         font-weight: normal;
         font-style: normal;
-        font-size: 19px;
+        font-size: 17px;
         color: #D1E0F4;
     }
     .indhold {
