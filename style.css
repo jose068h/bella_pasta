@@ -171,7 +171,10 @@ footer .section_wrapper {
 }
 
 footer img {
-    /*display: none;*/
+    width: 18vw;
+    position: relative;
+    top: 9vw;
+    left: 0vw;
 }
 
 footer .col {
@@ -244,6 +247,7 @@ footer .bottom {
         height: 9vw;
         width: auto;
         margin-left: 5vw;
+        top: 1vw;
     }
 
     footer .col {

@@ -101,7 +101,7 @@
             //når der klikkes på en knap, sørger eventhandleren.funktionen for, at h1-overskriften indehold opdateres. this henviser til den button der er klikket på;
             vis();
             header.textContent = this.textContent
-            //kald funktionen visperson efter det nye filter er sat på;
+            //kald funktionen vis menu det nye filter er sat på;
         }
 
 
@@ -121,8 +121,8 @@
             sektion.textContent = "";
             retter.forEach(ret => {
                 console.log("Retter", ret.kategori);
-                // loop igennem json (personer)
-                // tjek hvilken tro personeren har og sammenlign med aktuelt filter eller vis alle, hvis filter har værdien "alle";
+                // loop igennem json (menu)
+                //  sammenlign med aktuelt filter eller vis alle, hvis filter har værdien "alle";
                 if (filter == ret.kategori || filter == "alle") {
                     const klon = template.cloneNode(true);
                     klon.querySelector(".billede").src = medieurl + ret.billeder;
@@ -137,7 +137,7 @@
         }
 
         function visIndhold(hvad) {
-            //her navigerer vi med location.href han til en side. vi sender urlParametret id med og det får værdien af hvem._id
+            //her navigerer vi med location.href han til en side. vi sender urlParametret id med og det får værdien af hvad.id
             console.log("kan sende videre til detalje side")
 
             location.href = `menu-detalje.html?id=${hvad._id}`;
